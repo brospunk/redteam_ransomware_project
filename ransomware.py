@@ -203,6 +203,7 @@ class RedTeamRansomware:
         
         Contact the administrator with this Target ID
         to recover your files.
+        App Session: xyz123abcDEF
         
         Do NOT attempt to decrypt files without the key!
         ===========================================
