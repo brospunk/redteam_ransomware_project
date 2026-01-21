@@ -462,8 +462,8 @@ cryptography>=41.0.0
     
     # 4. Crea directory e file di configurazione
     print_status("\n4. Configurazione file system...", "info")
-    create_directories()
-    create_requirements_file()
+    #create_directories()
+    #create_requirements_file()
     
     # 5. Test finale
     print_status("\n5. Test finale...", "info")
