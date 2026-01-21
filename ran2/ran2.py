@@ -461,16 +461,16 @@ cryptography>=41.0.0
         install_vcredist_if_needed()
     
     # 4. Crea directory e file di configurazione
-    print_status("\n4. Configurazione file system...", "info")
+    #print_status("\n4. Configurazione file system...", "info")
     #create_directories()
     #create_requirements_file()
     
-    # 5. Test finale
-    print_status("\n5. Test finale...", "info")
+    # 4. Test finale
+    print_status("\n4. Test finale...", "info")
     imports_ok = test_imports()
     
-    # 6. Verifica ambiente virtuale
-    print_status("\n6. Verifica ambiente...", "info")
+    # 5. Verifica ambiente virtuale
+    print_status("\n5. Verifica ambiente...", "info")
     in_venv = hasattr(sys, 'real_prefix') or (hasattr(sys, 'base_prefix') and sys.base_prefix != sys.prefix)
     if not in_venv:
         print_status("Consiglio: usa un ambiente virtuale (venv)", "warning")
