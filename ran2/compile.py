@@ -1,4 +1,3 @@
-# compile_ultra_simple.py
 import PyInstaller.__main__
 import os
 import shutil
